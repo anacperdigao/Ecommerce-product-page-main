@@ -1,3 +1,5 @@
+//Aqui foi para fazer o botao contador de quatidade
+
 const botaoQuantidade = document.querySelectorAll(".botao-aumenta-diminui");
 const quantidade = document.querySelector("#quantidade");
 
@@ -14,4 +16,29 @@ function cliqueBotoesQuantidade(e){
     }
 
     quantidade.textContent = quantidadeTotal;
+    }
+
+
+// Aqui é para mostrar o carrinho de compras
+
+const botaoCarrinho = document.querySelector(".img__cart-perfil");
+const painelCarrinho = document.querySelector("#painel__carrinho");  
+
+botaoCarrinho.addEventListener('click', mostrarCarrinho);
+
+function mostrarCarrinho(e){
+    e.currentTarget.getAttribute('aria-expanded') === 'false'
+        ? e.currentTarget.setAttribute('aria-expanded','true')
+        : e.currentTarget.setAttribute('aria-expanded','false')
+
+    e.currentTarget.getAttribute('aria-expanded') === 'false'
+        ? painelCarrinho.setAttribute('disabled', 'true')
+        : painelCarrinho.removeAttribute('disabled')
 }
+
+//Aqui é para adicionar a quantidade no carrinho de compra
+
+botaoAdd = document.querySelector(".botao-add");
+
+botaoAdd.addEventListener('click', mostrarCarrinho);
+
