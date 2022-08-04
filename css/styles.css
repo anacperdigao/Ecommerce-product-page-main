@@ -88,6 +88,11 @@ nav li a:hover{
     border-radius: 5%;
 }
 
+.img__produto-grande:hover{
+    border: 2px solid var(--laranja-principal);
+    cursor: pointer;
+}
+
 .img__produto-pequeno{
     width: 70px;
     height: 70px;
