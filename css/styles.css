@@ -318,6 +318,7 @@ nav li a:hover{
 .lixeira{
     position: relative;
     left: 60px;
+    cursor: pointer;
 }
 
 #span-bold{

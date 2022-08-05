@@ -40,5 +40,5 @@ function mostrarCarrinho(e){
 
 botaoAdd = document.querySelector(".botao-add");
 
-botaoAdd.addEventListener('click', mostrarCarrinho);
+botaoCarrinho.addEventListener('click', mostrarCarrinho);
 
