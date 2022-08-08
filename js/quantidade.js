@@ -16,7 +16,10 @@ function cliqueBotoesQuantidade(e){
     }
 
     quantidade.textContent = quantidadeTotal;
+    updateCartState(quantidadeTotal);
+
     }
+
 
 
 // Aqui é para mostrar o carrinho de compras
@@ -40,5 +43,65 @@ function mostrarCarrinho(e){
 
 botaoAdd = document.querySelector(".botao-add");
 
-botaoCarrinho.addEventListener('click', mostrarCarrinho);
+botaoAdd.addEventListener('click', mostrarCarrinho);
+
+
+//Aqui é pra mudar o estado do carrinho de vazio pra cheio
+
+const checkoutState = {
+    'default': `    <div class="carrinho">
+                        <p class="carrinho__titulo">Cart</p>
+                    </div>
+                <div class="conteudo__vazio">
+                <p class="carrinho__conteudo">Your cart is empty</p>
+                </div>`,
+    'full': `   <div class="carrinho">
+                    <p class="carrinho__titulo">Cart</p>
+                </div>
+                <div class="container__conteudo-cheio"> 
+                <div class="conteudo__cheio">
+                    <img src="/assets/images/image-product-1-thumbnail.jpg" class="img__produto-miniatura">
+                    <div class="paragrafos_carrinho">  
+                        <p class="conteudo__produto-carrinho-p1">Fall Limited Edition Sneakers</p>
+                        <p class="conteudo__produto-carrinho-p2">
+                            <span>$125.00</span>
+                            <span>&times;</span>
+                            <span id="qtd">3</span>
+                            <span id="total">$375</span>
+                            <button class="lixeira">
+                                <svg width="14" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M0 2.625V1.75C0 1.334.334 1 .75 1h3.5l.294-.584A.741.741 0 0 1 5.213 0h3.571a.75.75 0 0 1 .672.416L9.75 1h3.5c.416 0 .75.334.75.75v.875a.376.376 0 0 1-.375.375H.375A.376.376 0 0 1 0 2.625Zm13 1.75V14.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 1 14.5V4.375C1 4.169 1.169 4 1.375 4h11.25c.206 0 .375.169.375.375ZM4.5 6.5c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Zm3 0c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Zm3 0c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Z" id="a"/></defs><use fill="#C3CAD9" fill-rule="nonzero" xlink:href="#a"/></svg>
+                            </button>
+                        </p>
+                    </div>  
+                </div>
+                <div class="botao__conteudo-cheio">
+                    <button type="submit" class="botao-checkout">Checkout</button>  
+                </div>  
+            </div>`
+}
+
+const containerCarrinho = document.querySelector('.container__carrinho')
+
+function updateCartState(num){
+    if(num === 0){
+        containerCarrinho.innerHTML = checkoutState.default;
+    } else{
+        containerCarrinho.innerHTML = checkoutState.full;
+        const qtd = document.querySelector('#qtd');
+        const totalCarrinho = document.querySelector('#total');
+        const preco = 125;
+        qtd.textContent = num;
+        totalCarrinho.textContent = `$${num * preco}.00`;
+    }
+}
+
+//Aqui é o botao da lixeira
+
+painelCarrinho.addEventListener('click',(e) => {
+    e.currentTarget === e.target && mostrarCarrinho();
+    e.target === document.querySelector('.lixeira') &&
+    updateCartState(0)
+}); 
+
+
 
