@@ -69,9 +69,9 @@ nav li a:hover{
 }
 
 .img__cart-perfil{
-    position: absolute;
-    right: 250px;
-    top: 40px;
+    position: relative;
+    right: 50px;
+    z-index: 20;
 }
 
 .img__cart-perfil:hover{
@@ -317,12 +317,17 @@ nav li a:hover{
 
 .lixeira{
     position: relative;
-    left: 60px;
+    left: 40px;
     cursor: pointer;
 }
 
-#span-bold{
+#total{
     font-weight: 700;
     color: var(--preto);
-    padding-left: 5px;
+    padding-left: 10px;
+}
+
+/*Isso aqui eu fiz porque a lixeira estava clicando no svg ao invés de clicar no botao*/
+svg {
+    pointer-events: none;
 }
