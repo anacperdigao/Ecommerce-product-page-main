@@ -17,9 +17,9 @@ function cliqueBotoesQuantidade(e){
 
     quantidade.textContent = quantidadeTotal;
     updateCartState(quantidadeTotal);
+    updateTag(quantidade);
 
     }
-
 
 
 // Aqui é para mostrar o carrinho de compras
@@ -85,6 +85,8 @@ const containerCarrinho = document.querySelector('.container__carrinho')
 function updateCartState(num){
     if(num === 0){
         containerCarrinho.innerHTML = checkoutState.default;
+        quantidade.textContent = 0;
+
     } else{
         containerCarrinho.innerHTML = checkoutState.full;
         const qtd = document.querySelector('#qtd');
@@ -97,11 +99,36 @@ function updateCartState(num){
 
 //Aqui é o botao da lixeira
 
+
+
 painelCarrinho.addEventListener('click',(e) => {
     e.currentTarget === e.target && mostrarCarrinho();
     e.target === document.querySelector('.lixeira') &&
-    updateCartState(0)
+    updateCartState(0);
 }); 
 
 
+//Mostrando a tag do carrinho
+
+const carrinhoTag = document.querySelector(".tag__quantidade");
+
+botaoAdd.addEventListener('click', mostraTag);
+
+function mostraTag(e){
+    
+        e.currentTarget.getAttribute('aria-expanded') === 'false'
+        ? carrinhoTag.setAttribute('disabled', 'true')
+        : carrinhoTag.removeAttribute('disabled')
+}
+
+//Atualizando a quantidade da tag do carrinho
+
+function updateTag(){
+    
+    if(quantidade < 1){
+        carrinhoTag = removeAttribute;
+    }else{
+        carrinhoTag.textContent = quantidade.textContent; 
+    }
+}
 

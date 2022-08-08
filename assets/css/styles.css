@@ -10,10 +10,6 @@
     --preto:hsl(0, 0%, 0%); /*with 75% opacity for lightbox background*/
 }
 
-*{
-	box-sizing: border-box;
- }
-
 body {
     font-family: var(--fonte-principal);
     font-size: 16px;
@@ -55,6 +51,7 @@ nav li a:hover{
 .img__avatar{
     width: 45px;
     height: 45px;
+    cursor: pointer;
     
 }
 
@@ -72,6 +69,7 @@ nav li a:hover{
     position: relative;
     right: 50px;
     z-index: 20;
+    cursor: pointer;
 }
 
 .img__cart-perfil:hover{
@@ -107,7 +105,6 @@ nav li a:hover{
     border: 2px solid var(--laranja-principal);
     border-radius: 10%;
     cursor: pointer;
-    z-index: 1;
     opacity: 50%;
 }
 
@@ -182,6 +179,7 @@ nav li a:hover{
     flex-direction: row;
     justify-content:space-between;
     align-items: center;
+    
 }
 
 
@@ -191,13 +189,13 @@ nav li a:hover{
     align-items: center;
     background-color: var(--azul-acinzentado-claro);
     border-radius: 10px;
+    width: 150px;
 }
 
 .botao-aumenta-diminui{
     padding: 12px 25px;
     
 }
-
 
 .botao-aumenta-diminui:hover{
     cursor: pointer;
@@ -206,6 +204,7 @@ nav li a:hover{
 .quantidade{
     font-size: 14px;
     font-weight: 700;
+    padding: 5px;
 }
 
 .botao-add {
@@ -330,4 +329,26 @@ nav li a:hover{
 /*Isso aqui eu fiz porque a lixeira estava clicando no svg ao invés de clicar no botao*/
 svg {
     pointer-events: none;
+}
+
+/*Aqui começa a tag de quantidade do carrinho*/
+
+.tag__quantidade{
+    position: relative;
+    z-index: 50;
+    color: var(--branco);
+    background-color: var(--laranja-principal);
+    width: 15px;
+    height: 13px;
+    font-size: 10px;
+    font-weight: 700;
+    border-radius: 5px;
+    left: 980px;
+    top: 45px;
+    text-align: center;
+    line-height: 1.3em;
+}
+
+.tag__quantidade[disabled]{
+    transform: translateY(-600%);
 }
