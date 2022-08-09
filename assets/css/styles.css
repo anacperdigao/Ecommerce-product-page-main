@@ -68,7 +68,7 @@ nav li a:hover{
 .img__cart-perfil{
     position: relative;
     right: 50px;
-    z-index: 20;
+    z-index: 50;
     cursor: pointer;
 }
 
@@ -335,7 +335,7 @@ svg {
 
 .tag__quantidade{
     position: relative;
-    z-index: 50;
+    z-index: 80;
     color: var(--branco);
     background-color: var(--laranja-principal);
     width: 15px;
