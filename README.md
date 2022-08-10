@@ -1,11 +1,10 @@
-<h1 align="center"> Pagina de produto - Site ecommerce </h1>
+<h1 align="center"> Página de produto - Site ecommerce </h1>
 
 <h2 align="center">Descrição do projeto </h2>
-<p>Essa é uma página de um produto de um site de ecommerce onde o usuário pode ver a galeria de fotos, adicionar a quantidade e verificar o carrinho de compras.</p>
+<p>Essa é a página de um produto de um site de ecommerce baseado em um desafio do site Frontend Mentor, onde o usuário pode ver a galeria de fotos, adicionar a quantidade e verificar o carrinho de compras.</p>
 
 <p>Figura 1: Pagina de produtos - Desktop</p>
-<p align="center"><img src="" width=800></p>
-
+<p align="center"><img src="https://user-images.githubusercontent.com/108142878/183791324-b2c5b491-9815-4813-a2c6-34fb1aa9dc28.jpg" width=800></p>
 
 <h2 align="center">Status do projeto </h2>
 <h4> :white_check_mark: Projeto finalizado :white_check_mark: </h4>
@@ -18,8 +17,7 @@
 - ``Funcionalidade 4:`` Botão de lixeira que exclui toda a quantidade que antes estava no carrinho.
 
 <p>Vídeo 1: Responsividade Desktop</p>
-<p align="center"><img src=""></p>
-
+<p align="center"><img src="https://user-images.githubusercontent.com/108142878/183791144-cf186c25-661e-41f3-b3ca-6358eae08540.gif"></p>
 
 
 <h2 align="center"> :file_folder: Acesso ao projeto </h2>
