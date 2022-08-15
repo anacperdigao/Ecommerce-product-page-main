@@ -7,7 +7,8 @@
 <p align="center"><img src="https://user-images.githubusercontent.com/108142878/183791324-b2c5b491-9815-4813-a2c6-34fb1aa9dc28.jpg" width=800></p>
 
 <h2 align="center">Status do projeto </h2>
-<h4> :white_check_mark: Projeto finalizado :white_check_mark: </h4>
+<h4> :white_check_mark: Responsividade para Desktop finalizado :white_check_mark: </h4>
+<h4> :construction: Responsividade para Mobile em construção :construction: </h4>
 
 <h2 align="center">:hammer: Funcionalidades do projeto </h2>
 
